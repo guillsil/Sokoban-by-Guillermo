@@ -1,0 +1,34 @@
+Up = NORTE
+Left = OESTE
+Down = SUR
+Right = ESTE
+
+w = NORTE
+a = OESTE
+s = SUR
+d = ESTE
+
+Escape = SALIR
+
+f = REINICIAR
+F = REINICIAR
+
+e = NEXT_LEVEL
+E = NEXT_LEVEL
+
+q = PREV_LEVEL
+Q = PREV_LEVEL
+
+W = NORTE
+A = OESTE
+S = SUR
+D = ESTE
+
+z = DESHACER
+Z = DESHACER
+
+y = REHACER
+Y = REHACER
+
+r = PISTA
+R = PISTA
