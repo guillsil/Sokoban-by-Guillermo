@@ -9,6 +9,7 @@ def juego_mostrar(grilla):
     tamanio = dimencion_grilla(grilla)
     for i in range(tamanio[COL]):
         for j in range(tamanio[FIL]):
+            #
             if hay_pared(grilla, i, j):
                 gamelib.draw_image("img/ground.gif", TAMANIO_CELDA * i, TAMANIO_CELDA * j)
                 gamelib.draw_image("img/wall.gif", TAMANIO_CELDA * i, TAMANIO_CELDA * j)
@@ -71,11 +72,13 @@ def convertir_inmutable(grilla):
     for fila in grilla:
         grilla_inmutable.append(tuple(fila))
     return tuple(grilla_inmutable)
+
 def buscar_solucion(estado_inicial):
     """Busca una solucion al nivel utilizando backtracking, si encuentra una solucion devuelve un conjunto de acciones
     que resuelven el nivel, de lo contrario devuelve None"""
     visitados = set()
     return backtrack(estado_inicial, visitados)
+
 def backtrack(estado, visitados):
     """Algoritmo de backtracking para resolver el nivel"""
     visitados.add(convertir_inmutable(estado))
@@ -90,6 +93,7 @@ def backtrack(estado, visitados):
             acciones.apilar(accion)
             return True,  acciones
     return False, None
+
 def ejecutar_movimiento(juego, accion):
     """Ejecuta el Movimiento presionado por la tecla y apila, desapila los estados para poder deshacer y rehacer"""
     juego["anteriores"].apilar(juego["grilla"])
