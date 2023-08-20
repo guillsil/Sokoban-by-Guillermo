@@ -30,11 +30,11 @@ Every room consists of five main elements: walls, floor, boxes, box targets, and
 | ---        | -----      | :---: | 
 | Wall       | Static     | ![Wall](/img/wall.gif "Wall") |
 | Floor      | Empty      | ![Floor](/img/ground.gif "Floor") | 
-| floor - goal | Empty      | ![BoxTarget](/img/goal.gif "Box Target") |
+| floor with goal | Empty      | ![BoxTarget](/img/goal.gif "Box Target") |
 | Box        | Off Target | ![BoxOffTarget](/img/box.gif "Box") |
 | Box - goal     | On Target  | ![BoxOnTarget](/img/box.gif "Box") |
 | Player     | Off Target | ![PlayerOffTarget](/img/player.gif "Player") |
-| Player - goal    | On Target  | ![PlayerOnTarget](/img/player.gif  "Player") |
+| Player with goal    | On Target  | ![PlayerOnTarget](/img/player.gif  "Player") |
 
 ### 2.2 Actions
 The game provides 9 actions to interact with the environment. 
