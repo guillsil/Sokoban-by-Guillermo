@@ -8,7 +8,7 @@ The room generation is random and therefore, will allow to train Deep Neural Net
 
 | Example Game 1 | Example Game 2 | Example Game 3 |
 | :---: | :---: | :---: 
-| ![Game 1](/docs/Animations/solved_3.gif?raw=true) | ![Game 2](/docs/Animations/solved_4.gif?raw=true) | ![Game 3](/docs/Animations/solved_5.gif?raw=true) |
+| ![Game 1](/img/img1.png) | ![Game 2](/img/img2.png) | ![Game 3](/img/img3.png) |
 
 
 ## 1 Installation
