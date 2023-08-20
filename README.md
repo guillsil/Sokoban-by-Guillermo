@@ -13,33 +13,28 @@ The room generation is random and therefore, will allow to train Deep Neural Net
 
 ## 1 Installation
 
-### Via PIP
-```bash
-pip install gym-sokoban
-```
-
 ### From Repository
 ```bash
-git clone git@github.com:mpSchrader/gym-sokoban.git
-cd gym-sokoban
+git https://github.com/guillsil/Sokoban-by-Guillermo.git
+cd Sokoban-by-Guillermo
 pip install -e .
 ```
-Checkout the [examples](/examples) on how to use an external gym environment.
+
 
 ## 2 Game Environment
 
 ### 2.1 Room Elements
 Every room consists of five main elements: walls, floor, boxes, box targets, and a player. They might have different states whether they overlap with a box target or not. 
 
-| Type       | State      | Graphic | TinyWorld |
-| ---        | -----      | :---: | :---: |
-| Wall       | Static     | ![Wall](/gym_sokoban/envs/surface/wall.png "Wall") | ![Wall](/gym_sokoban/envs/surface/tiny_world/wall.png "Wall") |
-| Floor      | Empty      | ![Floor](/gym_sokoban/envs/surface/floor.png "Floor") | ![Floor](/gym_sokoban/envs/surface/tiny_world/floor.png "Floor") |
-| Box Target | Empty      | ![BoxTarget](/gym_sokoban/envs/surface/box_target.png "Box Target") | ![BoxTarget](/gym_sokoban/envs/surface/tiny_world/box_target.png "Box Target") |
-| Box        | Off Target | ![BoxOffTarget](/gym_sokoban/envs/surface/box.png "Box") | ![BoxOffTarget](/gym_sokoban/envs/surface/tiny_world/box.png "Box") |
-| Box        | On Target  | ![BoxOnTarget](/gym_sokoban/envs/surface/box_on_target.png "Box") | ![BoxOnTarget](/gym_sokoban/envs/surface/tiny_world/box_on_target.png "Box") |
-| Player     | Off Target | ![PlayerOffTarget](/gym_sokoban/envs/surface/player.png "Player") | ![PlayerOffTarget](/gym_sokoban/envs/surface/tiny_world/player.png "Player") |
-| Player     | On Target  | ![PlayerOnTarget](/gym_sokoban/envs/surface/player_on_target.png "Player") | ![PlayerOnTarget](/gym_sokoban/envs/surface/tiny_world/player_on_target.png "Player") |
+| Type       | State      | Graphic |
+| ---        | -----      | :---: | 
+| Wall       | Static     | ![Wall](/img/wall.gif "Wall") |
+| Floor      | Empty      | ![Floor](/img/ground.gif "Floor") | 
+| floor - goal | Empty      | ![BoxTarget](/img/goal.gif "Box Target") |
+| Box        | Off Target | ![BoxOffTarget](/img/box.gif "Box") |
+| Box - goal     | On Target  | ![BoxOnTarget](/img/box.gif "Box") |
+| Player     | Off Target | ![PlayerOffTarget](/img/player.gif "Player") |
+| Player - goal    | On Target  | ![PlayerOnTarget](/img/player.gif  "Player") |
 
 ### 2.2 Actions
 The game provides 9 actions to interact with the environment. 
