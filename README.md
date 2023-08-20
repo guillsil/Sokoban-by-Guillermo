@@ -32,7 +32,7 @@ Every room consists of five main elements: walls, floor, boxes, box targets, and
 | Floor      | Empty      | ![Floor](/img/ground.gif "Floor") | 
 | floor with goal | Empty      | ![BoxTarget](/img/goal.gif "Box Target") |
 | Box        | Off Target | ![BoxOffTarget](/img/box.gif "Box") |
-| Box - goal     | On Target  | ![BoxOnTarget](/img/box.gif "Box") |
+| Box target     | On Target  | ![BoxOnTarget](/img/box.gif "Box") |
 | Player     | Off Target | ![PlayerOffTarget](/img/player.gif "Player") |
 | Player with goal    | On Target  | ![PlayerOnTarget](/img/player.gif  "Player") |
 
