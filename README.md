@@ -1,54 +1,51 @@
-# Sokoban-by-Guillermo 
-[Sokoban](https://en.wikipedia.org/wiki/Sokoban) is Japanese for warehouse keeper and a traditional video game.
-The game is a transportation puzzle, where the player has to push all boxes in the room on the storage locations/ targets.
-The possibility of making irreversible mistakes makes these puzzles so challenging especially for [Reinforcement Learning](https://en.wikipedia.org/wiki/Reinforcement_learning) algorithms, which mostly lack the ability to think ahead.
-<br/>The repository implements the game Sokoban based on the rules presented [DeepMind's]() paper [Imagination Augmented Agents for Deep Reinforcement Learning](https://papers.nips.cc/paper/7152-imagination-augmented-agents-for-deep-reinforcement-learning). 
-The room generation is random and therefore, will allow to train Deep Neural Networks without overfitting on a set of predefined rooms.
+# Sokoban-by-Guillermo 🎮
 
+[Sokoban](https://en.wikipedia.org/wiki/Sokoban) es una palabra japonesa que significa "guardián de almacén" y es un juego de video tradicional. El juego es un rompecabezas de transporte, donde el jugador debe empujar todas las cajas en la habitación hacia las ubicaciones de almacenamiento / objetivos. La posibilidad de cometer errores irreversibles hace que estos rompecabezas sean tan desafiantes, especialmente para los algoritmos de [aprendizaje por refuerzo](https://es.wikipedia.org/wiki/Aprendizaje_por_refuerzo), que en su mayoría carecen de la capacidad de pensar con anticipación. 🧩
 
-| Example Game 1 | Example Game 2 | Example Game 3 |
-| :---: | :---: | :---: 
-| ![Game 1](/img/img1.png) | ![Game 2](/img/img2.png) | ![Game 3](/img/img3.png) |
+El repositorio implementa el juego Sokoban basado en las reglas presentadas en el artículo de [DeepMind](https://deepmind.com/)'s "Imagination Augmented Agents for Deep Reinforcement Learning" (Agentes Aumentados de Imaginación para el Aprendizaje Profundo por Refuerzo). La generación de habitaciones es aleatoria y, por lo tanto, permitirá entrenar redes neuronales profundas sin sobreajuste en un conjunto de habitaciones predefinidas. 🤖
 
+## Ejemplo de Juegos
 
-## 1 Installation
+| Juego de Ejemplo 1 | Juego de Ejemplo 2 | Juego de Ejemplo 3 |
+| :---: | :---: | :---: |
+| ![Juego 1](/img/img1.png) | ![Juego 2](/img/img2.png) | ![Juego 3](/img/img3.png) |
 
-### From Repository
+## 1 Instalación
+
+### Desde el Repositorio
 ```bash
 git https://github.com/guillsil/Sokoban-by-Guillermo.git
 cd Sokoban-by-Guillermo
 pip install -e .
 ```
 
+## 2 Entorno de Juego
 
-## 2 Game Environment
+### 2.1 Elementos de la Habitación
+Cada habitación consta de cinco elementos principales: paredes, suelo, cajas, objetivos de cajas y un jugador. Pueden tener estados diferentes si se superponen con un objetivo de caja o no. 🏠
 
-### 2.1 Room Elements
-Every room consists of five main elements: walls, floor, boxes, box targets, and a player. They might have different states whether they overlap with a box target or not. 
-
-| Type       | State      | Graphic |
+| Tipo       | Estado      | Gráfico |
 | ---        | -----      | :---: | 
-| Wall       | Static     | ![Wall](/img/wall.gif "Wall") |
-| Floor      | Empty      | ![Floor](/img/ground.gif "Floor") | 
-| floor with goal | Empty      | ![BoxTarget](/img/goal.gif "Box Target") |
-| Box        | Off Target | ![BoxOffTarget](/img/box.gif "Box") |
-| Box target     | On Target  | ![BoxOnTarget](/img/box.gif "Box") |
-| Player     | Off Target | ![PlayerOffTarget](/img/player.gif "Player") |
-| Player with goal    | On Target  | ![PlayerOnTarget](/img/player.gif  "Player") |
+| Pared      | Estático     | ![Pared](/img/wall.gif "Pared") |
+| Suelo      | Vacío      | ![Suelo](/img/ground.gif "Suelo") | 
+| Suelo con objetivo | Vacío      | ![ObjetivoCaja](/img/goal.gif "Objetivo de Caja") |
+| Caja        | Fuera de objetivo | ![CajaFueraObjetivo](/img/box.gif "Caja") |
+| Objetivo de caja     | En objetivo  | ![CajaEnObjetivo](/img/box.gif "Caja") |
+| Jugador     | Fuera de objetivo | ![JugadorFueraObjetivo](/img/player.gif "Jugador") |
+| Jugador con objetivo    | En objetivo  | ![JugadorEnObjetivo](/img/player.gif  "Jugador") |
 
-### 2.2 Actions
-The game provides 10 actions to interact with the environment. Push and Move actions in the Up, Down, Left and Right directions. The Hint action that shows you a move.
-The action of undo and redo that modify the movements made. And the action of reset that returns the game to its initial state.
- | Action       | ID    | 
- | --------     | :---: |    
- | Move Up      |   w   |
- | Move Down    |   s   |
- | Move Left    |   a   |
- | Move Right   |   d   |
- | Reset        |   f   |
- | Undo         |   z   |
- | Redo         |   y   |
- | Hint         |   r   |
- | next level   |   e   |
- | previous level |  q   |
- 
+### 2.2 Acciones
+El juego proporciona 10 acciones para interactuar con el entorno. Acciones de Empujar y Mover en las direcciones Arriba, Abajo, Izquierda y Derecha. La acción de Pista que te muestra un movimiento. La acción de deshacer y rehacer que modifica los movimientos realizados. Y la acción de reinicio que devuelve el juego a su estado inicial. 🎮
+
+| Acción       | ID    | 
+| --------     | :---: |    
+| Mover Arriba      |   w   |
+| Mover Abajo    |   s   |
+| Mover Izquierda    |   a   |
+| Mover Derecha   |   d   |
+| Reiniciar        |   f   |
+| Deshacer         |   z   |
+| Rehacer         |   y   |
+| Pista         |   r   |
+| Siguiente nivel   |   e   |
+| Nivel anterior |  q   |
